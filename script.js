@@ -1,28 +1,33 @@
-var nomeCantina = "Cantina da Escola";
-console.log("Bem-vindo à " + nomeCantina);
+public class Cantina {
+    public static void main(String[] args) {
+        // Nome da cantina
+        String nomeCantina = "Cantina da Escola";
+        System.out.println("Bem-vindo à " + nomeCantina);
 
-let salgados = 20;
-console.log("Temos " + salgados + " salgados disponíveis.");
+        // Número de salgados e preço
+        int salgados = 20;
+        System.out.println("Temos " + salgados + " salgados disponíveis.");
 
-const precoSalgado = 5;
-console.log("Cada salgado custa R$" + precoSalgado);
+        double precoSalgado = 5.0;
+        System.out.println("Cada salgado custa R$" + precoSalgado);
 
-// Atualizando o número de salgados e calculando a venda
-salgados = salgados - 5;
-let totalVendido = 5 * precoSalgado;
+        // Atualizando o número de salgados e calculando a venda
+        salgados = salgados - 5;
+        double totalVendido = 5 * precoSalgado;
 
-console.log("Agora restam " + salgados + " salgados.");
-console.log("A cantina vendeu R$" + totalVendido);
+        System.out.println("Agora restam " + salgados + " salgados.");
+        System.out.println("A cantina vendeu R$" + totalVendido);
 
-// Teste de alteração de precoSalgado
-// precoSalgado = 6; // Isso vai dar erro!
+        // Teste de alteração de precoSalgado (não é possível em Java já que precoSalgado é final)
+        // precoSalgado = 6; // Isso geraria um erro se fosse final
 
-// Teste com var e let
-if (true) {
-    var testeVar = "Sou var"; 
-    let testeLet = "Sou let"; 
-    console.log(testeVar); // funciona dentro do bloco
-    console.log(testeLet); // funciona dentro do bloco
+        // Teste com variáveis de escopo
+        if (true) {
+            String testeVar = "Sou var (mas em Java não é exatamente assim)"; 
+            System.out.println(testeVar); // Funciona dentro do bloco
+        }
+        
+        // Aqui o testeVar não está acessível porque foi declarada dentro do bloco if
+        // System.out.println(testeVar); // Isso geraria um erro! TesteVar não existe fora do bloco
+    }
 }
-console.log(testeVar); // funciona fora do bloco (var tem escopo global)
-console.log(testeLet); // ERRO! let tem escopo de bloco
