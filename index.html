@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cantina da Escola</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo à <span id="nomeCantina">Cantina da Escola</span></h1>
+        <p>Temos <span id="quantidadeSalgados">20</span> salgados disponíveis.</p>
+        <p>Cada salgado custa R$<span id="precoSalgado">5</span></p>
+        
+        <div class="resultado" id="resultado">
+            <!-- O resultado será mostrado aqui -->
+        </div>
+
+        <button id="venderSalgadoBtn">Vender 5 salgados</button>
+    </div>
+
+    <script>
+        // Dados iniciais
+        let nomeCantina = "Cantina da Escola";
+        let salgados = 20;
+        const precoSalgado = 5;
+
+        // Exibindo as informações iniciais
+        document.getElementById('nomeCantina').textContent = nomeCantina;
+        document.getElementById('quantidadeSalgados').textContent = salgados;
+        document.getElementById('precoSalgado').textContent = precoSalgado;
+
+        // Função para vender 5 salgados
+        document.getElementById('venderSalgadoBtn').addEventListener('click', function() {
+            if (salgados >= 5) {
+                salgados -= 5; // Reduzindo a quantidade de salgados
+                let totalVendido = 5 * precoSalgado; // Calculando o total vendido
+
+                // Atualizando a tela com os novos dados
+                document.getElementById('quantidadeSalgados').textContent = salgados;
+                document.getElementById('resultado').innerHTML = `
+                    Agora restam ${salgados} salgados.<br>
+                    A cantina vendeu R$${totalVendido}.
+                `;
+            } else {
+                alert("Não há salgados suficientes para vender.");
+            }
+        });
+    </script>
+</body>
+</html>
