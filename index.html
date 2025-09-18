@@ -1,29 +1,29 @@
-var nomeCantina = "Cantina da Escola";
+<var nomeCantina = "Cantina da Escola";
 console.log("Bem-vindo à " + nomeCantina);
 
-let salgados = 20;
+<let salgados = 20;
 console.log("Temos " + salgados + " salgados disponíveis.");
 
-const precoSalgado = 5;
+<const precoSalgado = 5;
 console.log("Cada salgado custa R$" + precoSalgado);
 
 // Atualizando o número de salgados e calculando a venda
-salgados = salgados - 5;
-let totalVendido = 5 * precoSalgado;
+<salgados = salgados - 5;
+<let totalVendido = 5 * precoSalgado;
 
 console.log("Agora restam " + salgados + " salgados.");
-console.log("A cantina vendeu R$" + totalVendido);
+<console.log("A cantina vendeu R$" + totalVendido);
 
 // Teste de alteração de precoSalgado
 // precoSalgado = 6; // Isso vai dar erro!
 
 // Teste com var e let
-if (true) {
+<if (true) {
     var testeVar = "Sou var"; 
     let testeLet = "Sou let"; 
     console.log(testeVar); // funciona dentro do bloco
     console.log(testeLet); // funciona dentro do bloco
 }
-console.log(testeVar); // funciona fora do bloco (var tem escopo global)
-console.log(testeLet); // ERRO! let tem escopo de bloco
+<console.log(testeVar); // funciona fora do bloco (var tem escopo global)
+<console.log(testeLet); // ERRO! let tem escopo de bloco
 
