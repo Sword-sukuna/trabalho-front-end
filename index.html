@@ -1,17 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Exercício var, let e const</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cantina da Escola — Exemplo de var / let / const</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Exercício: var, let e const</h1>
-    <button onclick="executarExercicio()">Executar Exercício</button>
-    <pre id="console"></pre>
-  </div>
+  <header>
+    <div>
+      <h1 id="titulo">Bem-vindo à Cantina</h1>
+      <div class="muted">Exemplo prático: <code>var</code>, <code>let</code> e <code>const</code></div>
+    </div>
+  </header>
+
+  <section class="card">
+    <h2>Passo 1 — Declarando variáveis</h2>
+    <p>O código abaixo inicializa as variáveis conforme o enunciado e mostra os valores iniciais no painel e no console.</p>
+    <div class="numbers">
+      <div class="number-box">Nome da cantina:<br><strong id="nomeCantinaDisplay">Cantina da Escola</strong></div>
+      <div class="number-box">Salgados disponíveis:<br><strong id="salgadosDisplay">20</strong></div>
+      <div class="number-box">Preço por salgado:<br><strong id="precoDisplay">R$5</strong></div>
+    </div>
+
+    <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+      <button id="venderBtn">Vender 5 salgados</button>
+      <button id="tentarMudarConstBtn" class="secondary">Tentar mudar <code>precoSalgado</code></button>
+      <button id="escopoBtn" class="secondary">Demonstrar escopo <code>var</code> / <code>let</code></button>
+      <button id="resetBtn" class="secondary">Resetar valores</button>
+    </div>
+
+    <div style="margin-top:12px">
+      <h3>Console (saídas simuladas)</h3>
+      <pre id="console">// Console pronto — acione ações acima</pre>
+    </div>
+
+    <footer>
+      <strong>Objetivo:</strong> Entender que <code>var</code> é global/função, <code>let</code> respeita escopo de bloco e <code>const</code> não pode ser alterado.
+    </footer>
+  </section>
 
   <script src="script.js"></script>
 </body>
