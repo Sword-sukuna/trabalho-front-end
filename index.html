@@ -3,46 +3,47 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Cantina da Escola — Exemplo de var / let / const</title>
+  <title>Cantina da Escola — Exemplo var/let/const</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>🍽️ Cantina da Escola</h1>
-    <p class="muted">Exemplo prático: <code>var</code>, <code>let</code> e <code>const</code></p>
-  </header>
+  <main>
+    <header>
+      <h1>🍽️ Cantina da Escola</h1>
+      <p class="muted">Exemplo prático: <code>var</code>, <code>let</code> e <code>const</code></p>
+    </header>
 
-  <!-- Bloco 1 - Informações -->
-  <section class="card">
-    <h2>📊 Informações da Cantina</h2>
-    <div class="numbers">
-      <div class="number-box">Nome:<br><strong id="nomeCantinaDisplay">Cantina da Escola</strong></div>
-      <div class="number-box">Salgados disponíveis:<br><strong id="salgadosDisplay">20</strong></div>
-      <div class="number-box">Preço por salgado:<br><strong id="precoDisplay">R$5</strong></div>
-    </div>
-  </section>
+    <!-- Bloco 1 - Informações -->
+    <section class="card">
+      <h2>📊 Informações da Cantina</h2>
+      <div class="numbers">
+        <div class="number-box">Nome:<br><strong id="nomeCantinaDisplay">Cantina da Escola</strong></div>
+        <div class="number-box">Salgados disponíveis:<br><strong id="salgadosDisplay">20</strong></div>
+        <div class="number-box">Preço por salgado:<br><strong id="precoDisplay">R$5</strong></div>
+      </div>
+    </section>
 
-  <!-- Bloco 2 - Ações -->
-  <section class="card">
-    <h2>⚙️ Ações</h2>
-    <div class="actions">
-      <button id="venderBtn">💰 Vender 5 salgados</button>
-      <button id="tentarMudarConstBtn" class="secondary">🔒 Tentar mudar <code>const</code></button>
-      <button id="escopoBtn" class="secondary">📦 Escopo var/let</button>
-      <button id="resetBtn" class="secondary">🔄 Resetar valores</button>
-    </div>
-  </section>
+    <!-- Bloco 2 - Ações -->
+    <section class="card">
+      <h2>⚙️ Ações</h2>
+      <div class="actions">
+        <button id="venderBtn">💰 Vender 5 salgados</button>
+        <button id="tentarMudarConstBtn" class="secondary">🔒 Testar const</button>
+        <button id="escopoBtn" class="secondary">📦 Testar escopo</button>
+        <button id="resetBtn" class="secondary">🔄 Resetar</button>
+      </div>
+    </section>
 
-  <!-- Bloco 3 - Console -->
-  <section class="card">
-    <h2>🖥️ Console</h2>
-    <pre id="console">// Console pronto — clique em um botão acima</pre>
-  </section>
+    <!-- Bloco 3 - Console -->
+    <section class="card">
+      <h2>🖥️ Console</h2>
+      <pre id="console">// Console pronto — clique em um botão acima</pre>
+    </section>
 
-  <footer>
-    <strong>Objetivo:</strong> <code>var</code> é global/função, <code>let</code> respeita escopo de bloco e <code>const</code> não pode ser alterado.
-  </footer>
-
+    <footer>
+      <strong>Objetivo:</strong> <code>var</code> é global/função, <code>let</code> respeita escopo de bloco e <code>const</code> não pode ser alterado.
+    </footer>
+  </main>
   <script src="script.js"></script>
 </body>
 </html>
